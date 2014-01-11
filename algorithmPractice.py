@@ -77,4 +77,53 @@ fibResult = recursiveFib(10)
 print(fibResult)
 
 
+#Sorting! Insertion sort
+#First try:
+def sortMe(a):
+	for j in range(len(a)):
+	    for i in range(len(a) - 1):
+	    	if a[i] > a[i+1]:
+	    		temp = a[i]
+	    		a[i] = a[i+1]
+	    		a[i+1] = temp
+	    		print(a)
+
+b = [7, 3, 1, 2, 8, 5]
+sortMe(b)
+
+#Second try:
+def sortMeAgain(a):
+	for i in range(1,len(a)):
+		j = i - 1
+		k = i
+		while j >= 0:
+			if a[k] < a[j]:
+				temp = a[k]
+				a[k] = a[j]
+				a[j] = temp
+
+			else:
+				break
+			j = j - 1
+			k = k - 1
+	print(a)
+			
+b = [7, 3, 1, 2, 8, 5]
+sortMeAgain(b)
+
+#Simpler variation:
+def insertionSort(list):
+	for index in range(1, len(list)):
+		value = list[index]
+		i = index - 1
+		while i >= 0 and (value < list[i]):
+			list[i + 1] = list[i]
+			list[i] = value
+			i = i - 1
+
+b = [4, 3, 1, 3, 8, 5]
+insertionSort(b)
+print(b)
+
+
 
