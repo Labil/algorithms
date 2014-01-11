@@ -76,6 +76,13 @@ def recursiveFib(n):
 fibResult = recursiveFib(10)
 print(fibResult)
 
+#Fibonacci:
+#multiple assignement
+a, b = 0, 1
+while b < 10:
+	print b
+	a, b = b, a+b
+
 
 #Sorting! Insertion sort
 #First try:
